@@ -2,5 +2,5 @@
 A single-user chat app using AngularJS
 
 Contributors: 
-- Mehrdad Rafiee
-- Alice Choie
+- [Mehrdad Rafiee](https://github.com/mehrdadrafiee)
+- [Alice Choie](#)
