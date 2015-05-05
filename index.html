@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <title>A Simple App</title>
+
+    <link href='style.css' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body data-ng-app="bodyArea">
+    <header>
+      <h1>Comments</h1>
+      <p>A simple app that allows a user to input comments</p>
+    </header>
+
+    <main data-ng-controller="mainArea">
+      <section class='comment-input'>
+        <p>Add Your Comment:</p>
+        <input id="textField" data-ng-model="textArea"><button data-ng-click="addComments()">+</button>
+      </section>
+
+      <section class='comments' data-ng-repeat="comment in comments" data-ng-style="customStyle.style">
+      <p>{{ comment }}</p>
+      <!-- comments placeholder -->
+      </section>
+    </main>
+
+    <footer>
+      <p>this work is released into the public domain</p>
+    </footer>
+
+    <script src="./angular.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
