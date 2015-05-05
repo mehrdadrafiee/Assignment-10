@@ -13,13 +13,15 @@ chatApp.controller("mainArea", function($scope) {
         $scope.customStyle.style = {"color":"green"};
     }
 
-    $scope.turnBlue = function() {
-        $scope.customStyle.style = {"color":"blue"};
+    $scope.turnRed = function() {
+        $scope.customStyle.style = {"color":"red"};
     }
 
     $scope.addComments = function() {
-        if ($scope.textArea === null) {
+        console.log("textArea is", $scope.textArea, typeof $scope.textArea)
+        if (! $scope.textArea) {
             $scope.comments.push("Invalid entery!");
+            $scope.turnRed();
         }else {
             $scope.comments.push($scope.textArea);
             $scope.textArea = '';
