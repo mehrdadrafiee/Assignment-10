@@ -24,6 +24,7 @@ chatApp.controller("mainArea", function($scope) {
             $scope.turnRed();
         }else {
             $scope.comments.push($scope.textArea);
+            $scope.turnGreen();
             $scope.textArea = '';
             document.getElementById('textField').focus();
         }
